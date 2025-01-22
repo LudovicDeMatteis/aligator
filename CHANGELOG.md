@@ -27,9 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `LqrProblemTpl::isApprox()`
 - Only link against needed pinocchio libraries ([#260](https://github.com/Simple-Robotics/aligator/pull/260))
 - Use Pinocchio instantiated functions ([#261](https://github.com/Simple-Robotics/aligator/pull/261))
+- CMake: Link to pinocchio::pinocchio_collision target
 
 ### Fixed
 
+- Fixed copy of TrajOptProblem ([#265](https://github.com/Simple-Robotics/aligator/pull/265))
 - `LinesearchVariant::init()` should not be called unless the step accpetance strategy is a linesearch
 - Fixed compilation issues with C++20 (resolving [#246](https://github.com/Simple-Robotics/aligator/issues/246) and [#254](https://github.com/Simple-Robotics/aligator/discussions/254))
 
@@ -38,6 +40,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed `gar` as a separate CMake target and shared library, merge into main library
 - Remove subdirectory `aligator/helpers` from include dir
 - Remove function `allocate_shared_eigen_aligned()`
+
+### Added
+
+- Add a collision distance residual for collision pair
+- Add a relaxed log-barrier cost function
 
 ## [0.10.0] - 2024-12-09
 
